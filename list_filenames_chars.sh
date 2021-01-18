@@ -2,7 +2,7 @@
 ## created on 2018-12-19
 
 #### list and count file names characters 
-## Usefull for detecting problematic characters or chars to clean
+## Useful for detecting problematic characters or chars to clean
 
 folder="$1"
 
