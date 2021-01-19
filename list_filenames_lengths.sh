@@ -2,7 +2,7 @@
 ## created on 2016-09-24
 
 #### Get the length of filename in characters and in bytes
-## Useful to find files exceeding filesystem limitations
+## Useful to find files exceeding file system limitations
 
 
 folder="$1"

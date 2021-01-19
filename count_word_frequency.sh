@@ -12,7 +12,7 @@
 # 6. Sorts words
 # 7. Counts and remove the equal lines
 # 8. Sorts reverse in order to count the most frequent words
-# 9. Add a line number to each word in order to know the word posotion
+# 9. Add a line number to each word in order to know the word position
 
 
 AFILE="$1"
