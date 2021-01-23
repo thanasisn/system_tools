@@ -3,7 +3,7 @@
 #### Create a new executable bash script
 
 ## catch input and make valid name
-newscript=$1
+newscript="$1"
 scriptname="${newscript%.sh}.sh"
 
 if [[ -f "$scriptname" ]] ; then

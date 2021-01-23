@@ -4,6 +4,8 @@
 #### List compressed files by looking for mime type
 
 FOLDER="$1"
+## if no folder assume current
+: ${FOLDER:="./"}
 
 if [ ! -d "$FOLDER" ]; then
     echo "Give a folder"
@@ -11,9 +13,9 @@ if [ ! -d "$FOLDER" ]; then
 fi
 
 find "$FOLDER" -type f -exec file {} + |\
-    grep compress                      |\
+    grep "archive\|compres\|extract"   |\
     cut -d: -f1                        |\
     grep -i -v ".*.rds"
 
-
+    
 exit 0 

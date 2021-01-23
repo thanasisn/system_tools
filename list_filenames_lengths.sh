@@ -4,8 +4,8 @@
 #### Get the length of filename in characters and in bytes
 ## Useful to find files exceeding file system limitations
 
-
 folder="$1"
+: ${folder:="./"}
 
 if [  -d "$folder" ];then
 

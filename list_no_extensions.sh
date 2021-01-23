@@ -3,9 +3,8 @@
 
 #### List files without extensions
 
-
-
 folder="$1"
+: ${folder:="./"}
 
 if [  ! -d "$folder" ];then
     echo

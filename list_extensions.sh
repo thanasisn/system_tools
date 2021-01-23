@@ -3,14 +3,15 @@
 
 #### list unique extensions and count them
 
-
 folder="$1"
+: ${folder:="./"}
 
 if [ ! -d "$folder" ];then
     echo "Give a folder"
     exit 1
 fi
 
+## list counts of each tipe
 echo " FOLDER:  $folder "
 echo ""
 echo "----  Counts  ----"
@@ -24,8 +25,7 @@ find "$folder" -type f -iname "*.*" |\
     sort -n
 echo " $(find "$folder"  -type f ! -name "*.*" | wc -l)  NO EXTENSION "
 
-
-
+## list just the extensions
 echo ""
 echo "----  Sorted    ----"
 echo ""

@@ -5,6 +5,7 @@
 ## Useful for detecting problematic characters or chars to clean
 
 folder="$1"
+: ${folder:="./"}
 
 if [[ ! -d "$folder" ]];then
     echo "Give a folder to process"
