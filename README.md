@@ -3,6 +3,9 @@
 
 Different file system tools.
 
+Most of the scripts are short and simple in functionality.
+They are just convenient tools for the terminal.
+
 
 *Suggestions and improvements are always welcome.*
 
