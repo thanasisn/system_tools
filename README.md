@@ -17,6 +17,7 @@ Things they do:
 - **new_bash.sh               :**  Create a new executable bash script
 - **new_md.sh                 :**  Just create a new md file with the current date
 - **remove_duplicate_files.sh :**  find duplicate files with fdupes and remove them by matching patter
+- **scripts_titles.sh         :**  Get info for scripts containing a specified header
 - **speedup_clock.sh          :**  Speed up the time of a linux machine by adding a fixed amount of time at every interval
 
 
