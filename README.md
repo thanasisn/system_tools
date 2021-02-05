@@ -19,6 +19,7 @@ Things they do:
 - **remove_duplicate_files.sh :**  find duplicate files with fdupes and remove them by matching patter
 - **scripts_titles.sh         :**  Get info for scripts containing a specified header
 - **speedup_clock.sh          :**  Speed up the time of a linux machine by adding a fixed amount of time at every interval
+- **throttle_by_temp.sh       :**  Throttle a process cpu usage according to cpu temperature
 - **touch_random.sh           :**  Randomize files and folders dates
 
 
