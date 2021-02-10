@@ -6,34 +6,22 @@ key="####"
 folder="$1"
 
 
-getcomments(){
-    ## get comments from files bases on key
-    folder="$1"
-    key="$2"
-    grep "$key" $(find "$folder" -maxdepth 1  -name "*.sh" | sort) |\
-        sed -e "s@$folder/@@g" -e "s@:$key@;@g" -e "/$key/d" |\
-        column -t -s ";"
-}
+find "$folder" -maxdepth 1 -type f |\
+    sort                           |\
+    egrep -i '*.sh$|*.R$|*.py$'    |\
+    while read line; do
+       ff="$(echo "$line" | sed -e "s@$folder/@@g")"
+       tt="$(cat "$line" | grep "$key" | head -n1  | sed  "s@.*$key@;@g")" #-e "/$key/d")"
+       echo "$ff $tt"
+    done | column -t -s ";"
 
 
-getcomments "$folder" "$key"
 
 exit
 
-# find "$folder" -type d | sed "/\/\./d" | while read line ; do
-#     echo ""
-#     printf "\t\t $line \n"
-#     echo ""
-#
-#     folder="$line"
-#     grep $key $(find "$folder" -maxdepth 1  -name "*.sh" | sort) | sed -e "s@$folder/@@g" -e "s@:$key@;@g" -e "/$key/d" | column -t -s ";"
-#
-#     # getcomments "$line" "$key"
-#     (( i++ ))
-#     #echo $i
-# done
 
-
-
+grep "$key" $(find "$folder" -maxdepth 1 -type f  | sort) |\
+        sed -e "s@$folder/@@g" -e "s@:$key@;@g" -e "/$key/d" |\
+        column -t -s ";"
 
 
